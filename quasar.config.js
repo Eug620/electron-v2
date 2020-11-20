@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-11-13 19:59:54
- * @LastEditTime: 2020-11-13 19:59:54
+ * @LastEditTime: 2020-11-16 18:33:26
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -23,7 +23,15 @@ module.exports = function (ctx) {
 
     extras: [
       'roboto-font',
-      'material-icons'
+      'material-icons',
+      'material-icons-outlined',
+      'material-icons-round',
+      'material-icons-sharp',
+      'mdi-v3',
+      'ionicons-v4',
+      'eva-icons',
+      'fontawesome-v5',
+      'themify'
     ],
 
     // preFetch: true,

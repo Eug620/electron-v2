@@ -1,12 +1,13 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-11-07 12:32:28
- * @LastEditTime: 2020-11-13 19:47:45
+ * @LastEditTime: 2020-11-16 18:36:55
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
 <template>
   <div id="app">
+    <!-- <q-icon name="material-icons" /> -->
     <HelloWorld/>
   </div>
 </template>
