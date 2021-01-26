@@ -1,23 +1,20 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-11-07 12:32:28
- * @LastEditTime: 2020-11-16 18:36:55
- * @LastEditors: yeyuhang
+ * @LastEditTime: 2021-01-26 14:44:01
+ * @LastEditors: Please set LastEditors
  * @Descripttion: 头部注释
 -->
 <template>
   <div id="app">
-    <!-- <q-icon name="material-icons" /> -->
-    <HelloWorld/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 export default {
   name: 'App',
   components: {
-    HelloWorld
   },
   data () {
     return {
