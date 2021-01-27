@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-11-07 12:32:28
- * @LastEditTime: 2021-01-26 14:31:45
+ * @LastEditTime: 2021-01-27 11:00:44
  * @LastEditors: Please set LastEditors
  * @Descripttion: 头部注释
  */
@@ -11,6 +11,7 @@ import App from './App.vue'
 import router from './router'
 import { Quasar, QIcon } from 'quasar'
 import iconSet from 'quasar/icon-set/fontawesome-v5'
+import './components/useComponents'
 import './assets/style/base.scss'
 import './styles/quasar.sass'
 

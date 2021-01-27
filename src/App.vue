@@ -1,13 +1,13 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-11-07 12:32:28
- * @LastEditTime: 2021-01-26 14:44:01
+ * @LastEditTime: 2021-01-27 11:31:27
  * @LastEditors: Please set LastEditors
  * @Descripttion: 头部注释
 -->
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view/>
   </div>
 </template>
 
@@ -33,5 +33,8 @@ export default {
   /* margin-top: 60px; */
   width: 100%;
   height: 100%;
+}
+.eug-content-body{
+  margin-top: 60px;
 }
 </style>
