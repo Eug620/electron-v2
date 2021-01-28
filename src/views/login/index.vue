@@ -1,8 +1,8 @@
 <!--
  * @Author        : yeyuhang
  * @Date          : Do not edit
- * @LastEditTime: 2021-01-27 16:57:09
- * @LastEditors: Please set LastEditors
+ * @LastEditTime : 2021-01-28 16:14:58
+ * @LastEditors  : Eug
  * @Descripttion  : Descripttion
 -->
 <template>
@@ -12,8 +12,8 @@
       <q-card class="my-card text-blick fixed-center">
         <!-- title -->
         <q-card-section>
-          <div class="text-h6">Welcome !</div>
-          <div class="text-subtitle2">by Eug</div>
+          <div class="text-h6 text-center">{{isLogin ? 'Login' : 'Create'}}</div>
+          <div class="text-subtitle2 text-center">by Eug</div>
         </q-card-section>
         <!-- form -->
         <q-card-section>
@@ -83,14 +83,16 @@ export default {
       try {
         const res = await serverApi.UserLogin(this.mergeProps(true))
         if (res.code === 200) {
-          console.log(res)
           this.$router.push('/home')
         } else {
-          console.log('error')
+          this.$q.notify({
+            type: 'negative',
+            position: 'top',
+            message: 'The user does not exist!'
+          })
         }
-      } catch (err) {
-        console.log(err);
-        
+      } catch (error) {
+        throw Error(error);
       }
     },
     handleCreate () {
