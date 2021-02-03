@@ -1,12 +1,12 @@
 <!--
  * @Author        : yeyuhang
  * @Date          : Do not edit
- * @LastEditTime : 2021-01-28 16:14:58
+ * @LastEditTime : 2021-02-03 20:10:03
  * @LastEditors  : Eug
  * @Descripttion  : Descripttion
 -->
 <template>
-  <div>
+  <div class="eug-login-container" :style="{ 'background-image': `url(${bacImageUrl})` }">
     <router-link to="/home">home</router-link>
     <q-form class="q-gutter-md">
       <q-card class="my-card text-blick fixed-center">
@@ -60,12 +60,26 @@ export default {
       password: null,
       dense: false,
       isLogin: true,
-      isCreate: false
+      isCreate: false,
+      bacImageUrl: ''
     };
   },
   created() {
+    this.handleGetBackground()
   },
   methods: {
+    async handleGetBackground () {
+      try {
+        let res = await serverApi.Background()
+        if (res.code === 200) {
+          this.bacImageUrl = res.result.image_url;
+        } else {
+          console.log(res);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
     handleResetStatus (isLogin, isCreate) {
       this.isLogin = isLogin
       this.isCreate = isCreate
@@ -123,5 +137,11 @@ export default {
 .my-card {
   width: 100%;
   max-width: 250px;
+}
+.eug-login-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size:cover;
 }
 </style>
