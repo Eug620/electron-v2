@@ -175,6 +175,7 @@
     <q-page-container>
       <router-view />
       <router-link to="/">login</router-link>
+      <router-link to="/test">tests</router-link>
     </q-page-container>
   </q-layout>
 </template>

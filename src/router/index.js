@@ -1,3 +1,11 @@
+/* 
+ * @Author       : Eug
+ * @Date         : 2020-11-13 18:39:48
+ * @LastEditTime : 2021-02-04 12:26:58
+ * @LastEditors  : Eug
+ * @Descripttion : Descripttion
+ * @FilePath     : /electron-v2/src/router/index.js
+ */
 /*
  * @Author        : yeyuhang
  * @Date          : Do not edit
@@ -19,6 +27,11 @@ const routes = [
     path: '/home',
     name: 'home',
     component: () => import('@/views/home/index.vue')
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('@/views/test/index.vue')
   }
 ]
 
